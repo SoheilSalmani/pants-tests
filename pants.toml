@@ -7,8 +7,10 @@ backend_packages = [
 [python]
 interpreter_constraints = [">=3.9,<3.11"]
 enable_resolves = true
+resolves_generate_lockfiles = false
 
 [python.resolves]
-python_default = "lock.txt"
-helloworld = "src/python/helloworld/lock.txt"
-package = "src/python/package/lock.txt"
+python-default = "3rdparty/python-default/python-default.lock"
+
+[anonymous-telemetry]
+enabled = true
