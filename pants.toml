@@ -1,0 +1,14 @@
+[GLOBAL]
+pants_version = "2.11.0"
+backend_packages = [
+    "pants.backend.python"
+]
+
+[python]
+interpreter_constraints = [">=3.9,<3.11"]
+enable_resolves = true
+
+[python.resolves]
+python_default = "lock.txt"
+helloworld = "src/python/helloworld/lock.txt"
+package = "src/python/package/lock.txt"
